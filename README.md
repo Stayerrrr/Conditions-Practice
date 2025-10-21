@@ -8,7 +8,7 @@ Each program focuses on a different real-world scenario, helping you understand 
 ## 🧩 Program List
 
 ### 1. **Tiket Berdasarkan Umur (Ticket by Age)**
-**File:** `umur_tiket.c`
+**File:** `codelab.c`
 
 **Description:**  
 Determines the ticket price based on a passenger’s age.  
@@ -22,7 +22,7 @@ Includes input validation and several conditions for different age ranges.
 ---
 
 ### 2. **Kelas Tiket Pesawat (Flight Ticket Class)**
-**File:** `kelas_tiket.c`
+**File:** `codelab2.c`
 
 **Description:**  
 Simulates a flight ticket booking system using `enum` and `switch case`.  
@@ -36,7 +36,7 @@ The user selects a ticket class and gets price and facility info.
 ---
 
 ### 3. **Status Mahasiswa (Student Status Program)**
-**File:** `status_mahasiswa.c`
+**File:** `tugas.c`
 
 **Description:**  
 Collects student data (name, NIM, GPA) and displays output based on their academic status (`Cuti`, `Aktif`, `Lulus`).  
@@ -55,4 +55,16 @@ Also gives feedback depending on GPA and status.
 1. Make sure you have GCC installed.  
    ```bash
    gcc --version
-
+   ```
+   
+2. Compile and run the program
+   ```bash
+   gcc <filename>.c -p <outputname>
+   ./<outputname>
+   ```
+   
+Example
+   ```bash
+   gcc tugas.c -o tugas
+   ./tugas
+   ``` 

@@ -11,6 +11,7 @@ int main() {
     int stat, nim;
     float ipk;
     char nama[50];
+    float *ptr_jumlah = &ipk;
 
     printf("--- Pilih Status Mahasiswa ---\n");
     printf("1. Cuti\n2. Aktif\n3. Lulus\n");
@@ -50,9 +51,11 @@ int main() {
     printf("Nama : %s\nNIM  : %d\nIPK  : %.2f\n\n", nama, nim, ipk);
 
     if (stat == CUTI) {
-        printf(ipk < 2.0 ?
-            "Perhatian %s! IPK Anda rendah, manfaatkan masa cuti untuk memperbaiki.\n" :
-            "Semoga %s bisa kembali dengan semangat yang fresh!\n", nama);
+        if(ipk < 2.0 ) {
+           printf("Perhatian %s! IPK Anda rendah, manfaatkan masa cuti untuk memperbaiki.\n", nama);
+        } else {
+             printf("Semoga %s bisa kembali dengan semangat yang fresh!\n", nama);
+        }
     }
     else if (stat == AKTIF) {
         if (ipk >= 3.5)
@@ -72,6 +75,9 @@ int main() {
         else
             printf("Selamat %s! Anda telah menyelesaikan studi!\n", nama);
     }
+
+    printf("Alamat memori variabel ipk: %p\n", (void*)&ipk);
+    printf("Nilai IPK via pointer: %0.2f\n", *(&ipk));
 
     return 0;
 }
