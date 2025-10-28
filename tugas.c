@@ -11,7 +11,6 @@ int main() {
     int stat, nim;
     float ipk;
     char nama[50];
-    float *ptr_jumlah = &ipk;
 
     printf("--- Pilih Status Mahasiswa ---\n");
     printf("1. Cuti\n2. Aktif\n3. Lulus\n");
