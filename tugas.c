@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 enum StatusMahasiswa {
     CUTI = 1,
@@ -7,7 +8,8 @@ enum StatusMahasiswa {
 };
 
 int main() {
-    int stat, nim;
+    int stat;
+    long int  nim; 
     float ipk;
     char nama[50];
 
@@ -24,7 +26,7 @@ int main() {
     nama[strcspn(nama, "\n")] = 0; // remove newline
 
     printf("Masukkan NIM: ");
-    scanf("%d", &nim);
+    scanf("%ld", &nim);
 
     printf("Masukkan IPK: ");
     scanf("%f", &ipk);
@@ -47,7 +49,7 @@ int main() {
             return 0;
     }
 
-    printf("Nama : %s\nNIM  : %d\nIPK  : %.2f\n\n", nama, nim, ipk);
+    printf("Nama : %s\nNIM  : %ld\nIPK  : %.2f\n\n", nama, nim, ipk);
 
     if (stat == CUTI) {
         if(ipk < 2.0 ) {
