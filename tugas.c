@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 enum StatusMahasiswa {
     CUTI = 1,
@@ -16,6 +15,7 @@ int main() {
     printf("1. Cuti\n2. Aktif\n3. Lulus\n");
     printf("Masukkan pilihan status (1-3): ");
     scanf("%d", &stat);
+    
 
     while(getchar() != '\n'); // clear input buffer
 
@@ -73,6 +73,11 @@ int main() {
             printf("Selamat %s! Lulus dengan PREDIKAT SANGAT MEMUASKAN!\n", nama);
         else
             printf("Selamat %s! Anda telah menyelesaikan studi!\n", nama);
+    }
+    else {
+        printf("Input tidak valid, silahkan ulang dari awal");
+
+        return 0;
     }
 
     printf("Alamat memori variabel ipk: %p\n", (void*)&ipk);
