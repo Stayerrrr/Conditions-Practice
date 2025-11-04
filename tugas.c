@@ -10,7 +10,7 @@ enum StatusMahasiswa {
 int main() {
     int stat;
     long int  nim; 
-    float ipk;
+    double ipk;
     char nama[50];
 
     printf("--- Pilih Status Mahasiswa ---\n");
@@ -29,7 +29,7 @@ int main() {
     scanf("%ld", &nim);
 
     printf("Masukkan IPK: ");
-    scanf("%f", &ipk);
+    scanf("%lf", &ipk);
 
     printf("\n");
 
@@ -49,7 +49,7 @@ int main() {
             return 0;
     }
 
-    printf("Nama : %s\nNIM  : %ld\nIPK  : %.2f\n\n", nama, nim, ipk);
+    printf("Nama : %s\nNIM  : %ld\nIPK  : %.2lf\n\n", nama, nim, ipk);
 
     if (stat == CUTI) {
         if(ipk < 2.0 ) {
@@ -83,7 +83,7 @@ int main() {
     }
 
     printf("Alamat memori variabel ipk: %p\n", (void*)&ipk);
-    printf("Nilai IPK via pointer: %0.2f\n", *(&ipk));
+    printf("Nilai IPK via pointer: %0.2lf\n", *(&ipk));
 
     return 0;
 }
